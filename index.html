@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-A-Mole "First Price"</title>
+
+    <!-- Styles --> 
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/global.css">
+
+    <!-- Scripts -->
+    
+
+    <!--JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--Google_Fonts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-fontpicker/1.4.4/jquery.fontpicker.min.js" integrity="sha512-x1EmGH1DcQPP0ICawrFLwTcl3XualoQYxX+2k2hD1RnfnlfP1JMvAktqLGaKw2WxXKZnpo92/0Nk1eKENydFxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="bg">
+
+    <div class="container">
+        <div class="menu" id="menu">
+            <div class="wrapper" id="menu-wrapper">
+                <div class="header">
+                    <button id="play">Play</button>
+                    <button id="options">Options</button>
+                    <button id="about">About</button>
+                    <button id="exit">Exit</button>
+                </div>
+            </div>
+            <div class="wrapper" id="about-wrapper" style="display:none">
+                <div class="header">
+                    <p>Rolloing text :D</p>
+                    <button id="about-back">Back</button>
+                </div>
+            </div>
+
+            <div class="wrapper" id="options-wrapper" style="display:none">
+                <div class="header">
+                    <button id="options-back">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        
+        <div class="gameplay" id="gameplay" style="display:none;">
+            <div class="icons">
+                <img src="path-to-image1.png" alt="icon1" />
+                <img src="path-to-image2.png" alt="icon2" />
+                <img src="path-to-image3.png" alt="icon3" />
+                <!-- add as many images as you want -->
+            </div>
+
+            <div class="wrapper">
+                <div class="header">
+                    <div class="score">
+                        <h1>SCORE: <span id="currentScore">00</span></h1>
+                        <h1>HIGHSCORE: <span id="highScore">00</span></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board">
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Scripts -->
+    <script src="scripts/player.js"></script>
+    <script src="scripts/gameState.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

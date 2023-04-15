@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Alagard';
+    src: url("../assets/fonts/_bitmap_font____romulus_by_pix3m-d6aokem.ttf");
+    font-size: 11px;
+}
+
+* {
+    font-family: 'Alagard';
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+html, body{
+    background: var(--ground-default);
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5vh;
+}
+
+.header .score h1{
+    color: var(--text);
+    font-size: 36px;
+}
+
+.board{
+    margin-top: 5vh;
+    height: 600px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 80px;
+}
+
+.board .hole{
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: inset 0 10px 0 7px rgb(53, 21, 6),
+                inset 0 20px 20px 15px rgba(0,0,0,.3),
+                0 0 5px rgba(0,0,0,.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.board .hole .mole{
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: rise .3 ease-out;
+}
+
+@keyframes rise {
+    0%{
+        transform: translateX(-50%) translateY(100%);
+    }
+    100%{
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.cursor{
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    cursor: pointer;
+}
+
+@keyframes hammer {
+    0% {
+      transform: rotate(-30deg);
+    }
+    50% {
+      transform: rotate(-45deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+}
+
+.icons {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.icons img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.menu button{
+    color: #193540;
+    padding: 25px;
+    background-color: #E4D7AA;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 36px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 10em;
+
+}
+
+.menu button:hover{
+    background-color: #fff4be;
+}
+
+:root{
+    /* Backgrounds */
+    --ground-default: #fb8500;
+
+    /* Typography */
+    --text: #ffffff;
+}
